@@ -17,7 +17,7 @@ namespace dotnetcoresignalr.Hubs
         }
 
         public override Task OnDisconnectedAsync(System.Exception exception) {
-            Console.WriteLine($"user got disconnected {exception.Message}");
+            Console.WriteLine($"user got disconnected {exception?.Message}");
             return base.OnDisconnectedAsync(exception);
         }
     }
