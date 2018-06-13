@@ -1,25 +1,36 @@
-<div class="container">
-    <div class="row">&nbsp;</div>
-    <div class="row">
-        <div class="col-6">&nbsp;</div>
-        <div class="col-6">
-            User..........<input type="text" id="userInput" />
-            <br />
-            Message...<input type="text" id="messageInput" />
-            <input type="button" id="sendButton" value="Send Message" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <hr />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6">&nbsp;</div>
-        <div class="col-6">
-            <ul id="messagesList"></ul>
-        </div>
-    </div>
-</div>
-<script src="/lib/signalr/signalr.js"></script>    
-<script src="/js/chat.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="/style.css">
+    <title>Dotnet Core SignalR test</title>
+</head>
+<body>
+    <h2>SignalR chat</h2>
+    <h5>This will interact with ChatHub.cs</h5>
+    <p>
+        User..........<input type="text" id="userInput" value="me" /><br />
+        Message...<input type="text" id="messageInput" value="hello back" />
+    </p>
+    <p>
+        <input type="button" id="sendButton" value="Send Message" />
+    </p>
+    <ul id="messagesList"></ul>
+    <br />
+    <h2>Web api</h2>
+    <h5>This will interact with ValuesController.cs</h5>
+    <p>
+        <input type="text" id="apiurl" value="/api/values"/>
+        <button id="btnRest">Test api</button>
+    </p>
+    <textarea id="result"></textarea>
+    
+    <script src="/lib/signalr/signalr.js"></script>    
+    <script type="module">
+        import index from './index.js';
+    </script>    
+</body>
+</html>
