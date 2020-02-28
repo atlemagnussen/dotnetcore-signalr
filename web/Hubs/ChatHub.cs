@@ -16,7 +16,7 @@ namespace Test.webapi.Hubs
         }
         public async Task SendMessage(UserMessage msg)
         {
-            _logger.LogInformation("hello from chathub");
+            _logger.LogDebug("DEBUG SendMessage called");
             await Clients.All.SendAsync("ReceiveMessage", msg.User, msg.Message);
         }
 
